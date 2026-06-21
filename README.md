@@ -4,11 +4,13 @@
 
 **凡人修仙传 · 韩立 · 大庚剑阵 | 手势操控 3D 飞剑模拟器**
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Built with](https://img.shields.io/badge/Built%20with-React%2019-%2361DAFB?logo=react)](https://react.dev)
 [![Three.js](https://img.shields.io/badge/Three.js-0.160-black?logo=three.js)](https://threejs.org)
 [![Vite](https://img.shields.io/badge/Vite-6.2-%23646CFF?logo=vite)](https://vitejs.dev)
 [![MediaPipe](https://img.shields.io/badge/MediaPipe-Hands-blue)](https://ai.google.dev/edge/mediapipe)
 [![Gemini](https://img.shields.io/badge/AI-Gemini%203%20Pro-%238E75B2?logo=googlegemini)](https://ai.google.dev)
+[![GitHub stars](https://img.shields.io/github/stars/HanGu007/sword-array-3d?style=social)](https://github.com/HanGu007/sword-array-3d)
 
 </div>
 
@@ -126,15 +128,22 @@
 
 ---
 
-## 安装部署
+## 🚀 快速开始
 
-### 前置条件
+### 在线体验
+
+<!-- 如果有部署好的在线版本，取消注释下一行 -->
+<!-- [![Open in CloudStudio](https://cloudstudio.net/button/open-in-cs/8.svg)](https://你的部署地址) -->
+
+### 本地运行
+
+#### 前置条件
 
 - **Node.js** ≥ 18
 - **摄像头**（用于手势识别）
 - **Gemini API Key**（用于 AI 对话功能，可选）
 
-### 本地运行
+#### 安装步骤
 
 ```bash
 # 1. 克隆仓库
@@ -144,8 +153,10 @@ cd sword-array-3d
 # 2. 安装依赖
 npm install
 
-# 3. 配置 API Key（可选，不配也能看剑阵，只是不能用 AI 聊天）
-echo "GEMINI_API_KEY=你的API密钥" > .env.local
+# 3. 配置 API Key（可选）
+cp .env.example .env.local
+# 然后编辑 .env.local，填入你的 Gemini API Key
+# 获取地址：https://ai.google.dev/
 
 # 4. 启动开发服务器
 npm run dev
@@ -153,7 +164,7 @@ npm run dev
 
 浏览器访问 `http://localhost:3000/`，首次打开会请求摄像头权限，允许后即可用手势操控。
 
-### 生产构建
+#### 生产构建
 
 ```bash
 npm run build    # 输出到 dist/
@@ -162,11 +173,17 @@ npm run preview  # 本地预览构建产物
 
 `dist/` 目录可部署到任意静态托管服务（Vercel / Netlify / GitHub Pages / CloudStudio）。
 
-### 环境变量
+#### 环境变量
 
 | 变量 | 必填 | 说明 |
 |------|------|------|
 | `GEMINI_API_KEY` | 否 | Google Gemini API 密钥，用于韩立 AI 对话。缺失时聊天不可用，剑阵正常运行 |
+
+### 📱 支持的设备
+
+- ✅ 带摄像头的台式机/笔记本
+- ✅ 平板电脑（支持摄像头）
+- ⚠️ 手机（摄像头支持有限，建议使用 PC）
 
 ---
 
@@ -193,6 +210,109 @@ sword-array-3d/
 
 ---
 
+## 💡 常见问题 (FAQ)
+
+<details>
+<summary><b>Q: 摄像头无法开启？</b></summary>
+
+A: 请检查：
+1. 浏览器是否支持 HTTPS 或 localhost（MediaPipe 需要安全上下文）
+2. 是否已授予摄像头权限
+3. 是否有其他应用占用摄像头
+
+</details>
+
+<details>
+<summary><b>Q: 手势识别不准确？</b></summary>
+
+A: 建议：
+1. 确保光线充足
+2. 手部距离摄像头 20-50cm
+3. 避免复杂背景
+4. 手势做出后稍作停留（约 0.5 秒）
+
+</details>
+
+<details>
+<summary><b>Q: 画面卡顿？</b></summary>
+
+A: 尝试：
+1. 减少飞剑数量（左手手指收回一些）
+2. 关闭其他占用 GPU 的应用
+3. 使用性能更好的浏览器（Chrome/Edge）
+4. 降低浏览器缩放比例
+
+</details>
+
+<details>
+<summary><b>Q: AI 对话无法使用？</b></summary>
+
+A: 需要配置 Gemini API Key：
+1. 复制 `.env.example` 为 `.env.local`
+2. 填入有效的 Gemini API Key
+3. 重启开发服务器
+
+注意：不配置 API Key 也能正常使用剑阵，只是无法使用 AI 对话功能。
+
+</details>
+
+<details>
+<summary><b>Q: 如何部署到线上？</b></summary>
+
+A: 构建后部署 `dist/` 目录到任意静态托管服务：
+- [Vercel](https://vercel.com/) - 推荐，一键部署
+- [Netlify](https://www.netlify.com/)
+- [GitHub Pages](https://pages.github.com/)
+- [CloudStudio](https://cloudstudio.net/)
+
+</details>
+
+---
+
+## 🤝 贡献
+
+欢迎贡献！请阅读 [贡献指南](CONTRIBUTING.md) 了解详情。
+
+### 贡献者
+
+<!-- 如果你贡献了代码，欢迎添加你的名字和链接 -->
+- [@HanGu](https://github.com/HanGu007) - 初始开发
+
+---
+
 ## License
 
-MIT
+MIT - 详见 [LICENSE](LICENSE) 文件。
+
+---
+
+## 🙏 致谢
+
+- [Three.js](https://threejs.org/) - 强大的 3D 渲染引擎
+- [MediaPipe](https://ai.google.dev/edge/mediapipe) - 实时手势识别
+- [Google Gemini](https://ai.google.dev/) - AI 对话能力
+- [React](https://react.dev/) - UI 框架
+- [Vite](https://vitejs.dev/) - 极速构建工具
+- [Tailwind CSS](https://tailwindcss.com/) - 样式框架
+
+---
+
+## 📚 相关资源
+
+- 项目主页：[https://github.com/HanGu007/sword-array-3d](https://github.com/HanGu007/sword-array-3d)
+- 问题反馈：[GitHub Issues](https://github.com/HanGu007/sword-array-3d/issues)
+- 功能讨论：[GitHub Discussions](https://github.com/HanGu007/sword-array-3d/discussions)
+- 贡献指南：[CONTRIBUTING.md](CONTRIBUTING.md)
+
+---
+
+## 💬 社区
+
+欢迎加入讨论，分享你的剑阵创意！
+
+如有问题，请在 [GitHub Discussions](https://github.com/HanGu007/sword-array-3d/discussions) 提问。
+
+---
+
+⚡ **道友，开始你的剑阵之旅吧！** � 🙏
+

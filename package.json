@@ -1,8 +1,33 @@
 {
-  "name": "大庚剑阵-·-灵动篇-(sword-array-3d)",
-  "private": true,
-  "version": "0.0.0",
+  "name": "sword-array-3d",
+  "version": "1.0.0",
+  "description": "基于 Three.js 和 MediaPipe 的沉浸式大庚剑阵手势模拟器 - 通过摄像头捕捉双手动作，实时操控飞剑结成剑阵",
+  "keywords": [
+    "three.js",
+    "mediapipe",
+    "hand-tracking",
+    "sword-array",
+    "3d-animation",
+    "react",
+    "vite",
+    "gemini-ai",
+    "xianxia",
+    "Interactive-experience"
+  ],
   "type": "module",
+  "license": "MIT",
+  "author": {
+    "name": "HanGu",
+    "url": "https://github.com/HanGu007"
+  },
+  "homepage": "https://github.com/HanGu007/sword-array-3d#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HanGu007/sword-array-3d.git"
+  },
+  "bugs": {
+    "url": "https://github.com/HanGu007/sword-array-3d/issues"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -23,5 +48,15 @@
     "tailwindcss": "^4.3.1",
     "typescript": "~5.8.2",
     "vite": "^6.2.0"
-  }
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "package.json"
+  ]
 }
