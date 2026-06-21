@@ -1,0 +1,7 @@
+{
+  "name": "大庚剑阵 · 灵动篇 (Sword Array 3D)",
+  "description": "基于 Three.js 和 MediaPipe 的沉浸式大庚剑阵手势模拟器。支持双掌控灵，分段玉质剑身设计。",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
