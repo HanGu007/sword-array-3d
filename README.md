@@ -22,6 +22,25 @@
 
 ---
 
+## 截图预览
+
+<div align="center">
+
+| 剑阵效果 | 剑阵效果 |
+|----------|----------|
+| ![青元剑河](./screenshots/02-sword-river.png) | ![三才螺旋](./screenshots/03-spiral.png) |
+| ![庚金巨浪](./screenshots/04-formation.png) | ![庚金盾幕](./screenshots/06-wave.png) |
+| ![万剑随心](./screenshots/07-dragon-swarm.png) | ![剑丸归元](./screenshots/08-shield.png) |
+
+| UI 界面 |
+|---------|
+| ![主界面概览](./screenshots/01-overview.png) |
+| ![韩立传音符](./screenshots/05-chat-ui.png) |
+
+</div>
+
+---
+
 ## 手势操控
 
 | 手 | 手势 | 控制参数 |
